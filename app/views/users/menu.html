@@ -1,0 +1,59 @@
+<%= stylesheet_link_tag "menu.css" %>
+<h1 id="click">Click to order!</h1>
+<div id="content">
+    <div id="menu">
+        <h2>Pizza</h2>
+        <div class="products">
+            <%@pizza.each do |p|%>
+            <div class="card">
+                <img class="card-img-top" src="<%=p.img%>" alt="Card image cap">
+                <%if current_user%>
+                <a href ="/pizza_orders/<%=p.id%>" class="pName"><%=p.name%></a>
+                <%else%>
+                <a href ="/log_in" class="pName"><%=p.name%></a>
+                <%end%>
+                <div class="card-body" >
+                <p class="card-text"><%=p.desc%></p>
+                </div>
+            </div>
+            <%end%>
+        </div>
+        <h2>Other</h2>
+        <div class="products">
+            <%@food.each do |p|%>
+            <div class="card">
+                <img class="card-img-top" src="<%=p.img%>" alt="Card image cap">
+                <%if current_user%>
+                <a href ="/food_orders/<%=p.id%>" class="pName"><%=p.name%></a>
+                <%else%>
+                <a href ="/log_in" class="pName"><%=p.name%></a>
+                <%end%>
+                <div class="card-body" >
+                <p class="card-text"><%=p.desc%></p>
+                </div>
+            </div>
+            <%end%>
+        </div>
+    </div>
+    <div id="order">
+        <h2>Your order</h2>
+        <%if current_user%>
+            <%if current_user.cart.hold == false%>
+            <ul>
+                <%@piz.each do |p|%>
+                <li><%=p.pizza.name%>   |   <%=p.pizza.price/100%>   |   <a href="cart/pizza/<%=p.id%>">Remove</a></li>
+                <%end%>
+                <%@fo.each do |p|%>
+                <li><%=p.food.name%>   |   <%=p.food.price/100%>   |   <a href="cart/food/<%=p.id%>">Remove</a></li>
+                <%end%>
+            </ul>
+            <a id="check" href="/checkout">Checkout</a>
+            <%else%>
+            <h2>Please come pick up your order to order more!</h2>
+            <%end%>
+        <%else%>
+        <h3>Please log in to create an order</h3>
+        <%end%>
+
+    </div>
+</div>

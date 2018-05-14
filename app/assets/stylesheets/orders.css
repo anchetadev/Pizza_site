@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#orderPage{
+    padding: 15px;
+}
+#orderPage h1, h3 {
+    text-align: center;
+}
+#orderInfo {
+    max-width: 350px;
+}
+#orderInfo ul li{
+    font-size: 15pt;
+}

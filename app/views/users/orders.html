@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "order.css" %>
+<div class="container" id="orderPage">
+        <h1>All Orders</h1>
+        <%@user.each do |u|%>
+        <div id="orderInfo">
+            <%if u.cart == nil || u.cart.hold == false%>
+                <%next%>
+            <%end%>
+        <h3><%=u.email%></h3>
+        <ul id="orders">
+        <%u.cart.pizza_orders.each do |p|%>
+        <li><%=p.pizza.name%></li>
+        <%end%>
+        <%u.cart.food_orders.each do |p|%>
+        <li><%=p.food.name%></li>
+        <%end%>
+        </ul>
+        <a href="/order/<%=u.cart.id%>" data-method="delete">Finish this order</a>
+    <%end%>
+        </div>
+
+</div>

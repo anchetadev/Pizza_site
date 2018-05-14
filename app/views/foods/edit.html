@@ -1,0 +1,21 @@
+<div class="container">
+    <form method="POST" action="/foods/<%=@food.id%>">
+        <h1>Edit a pizza</h1>
+        <input type="hidden" name="_method" value="patch">
+        <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" value="<%=@food.name%>">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="desc"  value="<%=@food.desc%>">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="price"  value="<%=@food.price%>">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="img"  value="<%=@food.img%>">
+        </div>
+        <button type="submit" name="Edit">Edit</button>
+    </form>
+    <a href="/foods/<%=@food.id %>" data-method="delete">Delete this food!</a>
+</div>

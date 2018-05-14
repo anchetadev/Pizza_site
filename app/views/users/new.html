@@ -1,0 +1,33 @@
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+<div class="container">
+    <h1>Log in</h1>
+    <form method="POST" action="/sessions/new" action="/action_page.php">
+    <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter email" name="log_email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Enter password" name="log_password">
+        </div>
+        <button type="submit" name="Log In">Log In</button>
+    </form>
+</div>
+<div class="container">
+    <h1>Register an account</h1>
+    <form method="POST" action="/users" id="reg">
+    <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Enter password" name="password">
+        </div>  
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Confirm password" name="password_confirmation">
+        </div>             
+        <button type="submit" name="register">Register</button>
+    </form>
+</div>

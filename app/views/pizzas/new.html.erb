@@ -1,0 +1,19 @@
+<h1>Create a Pizza</h1>
+<div class="container">
+    <form method="POST" action="/pizzas/new">
+    <input type = 'hidden' name = "authenticity_token" value = "<%=form_authenticity_token%>">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter product name" name="name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter description" name="desc">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter price" name="price">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Image Url" name="img">
+        </div>
+        <button type="submit" name="Create">Create</button>
+    </form>
+</div>
