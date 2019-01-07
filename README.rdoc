@@ -1,28 +1,14 @@
-== README
+# Take home pizza ordering website inspired by Papa Murphy's user unfriendly website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
+- User friendly
+- Not confusing
+- Straight forward user flow through site, no confusing routes or extra pages
+- User authentication 
+- Administrative features to perform CRUD operations to the database
+- Stripe API integration
 
-Things you may want to cover:
+### Here's a simple overview of what a user could do
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. User will hit the landing page
+![Landing page](./app/assets/pizzaLanding.png)
