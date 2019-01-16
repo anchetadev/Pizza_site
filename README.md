@@ -1,4 +1,5 @@
 # Take home pizza ordering website inspired by Papa Murphy's user unfriendly website
+- Visit the site here! Deployed using AWS [Check me out!](http://3.17.56.100/)
 
 ## Features
 - User friendly
