@@ -9,6 +9,10 @@
 - Administrative features to perform CRUD operations to the database
 - Stripe API integration
 
+### Here's a diagram of the models
+- Some of it is a little wonky because I configured the models as I figured things out; essentially a User has one Cart which has many Orders of food or pizza items (in hindsight they could've been the same item because of the identical fields).
+![Cool EER diagram I made at 1AM](./app/assets/images/EER.png)
+
 ### Here's a simple overview of what a user could do
 
 1. User will hit the landing page
