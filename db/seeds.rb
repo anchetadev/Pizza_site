@@ -1,7 +1,16 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#User with admin privileges
+User.create(email:"admin@email.com", password:"asdasdasd", admin: true)
+
+#food items
+# price must be in pennies to account for stripe's logic
+Pizza.create(name:"Cowboy", desc:"Our Original Crust topped with Traditional Red Sauce, Whole-Milk Mozzarella, Premium Pepperoni, Italian Sausage, Sliced Mushrooms, Black Olives, Cheddar, and Herb & Cheese Blend", price:1000,img:"https://olo-images-live.imgix.net/65/65094dbbf6d148a4aeafe310312fe890.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=c1d83a63e1c8ff938b3923c875f84272")
+Pizza.create(name:"Murphy's Combo", desc:"Our Original Crust topped with Traditional Red Sauce, Whole-Milk Mozzarella, Canadian Bacon, Salami, Premium Pepperoni, Italian Sausage and Ground Beef, and Cheddar", price:1000,img:"https://olo-images-live.imgix.net/21/21d1ef5e4f7f41679848329e1afdbee6.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=806788b8ee4ca771e3806f7e584f1b62")
+Pizza.create(name:"Papa's All Meat", desc:"Our Original Crust topped with Traditional Red Sauce, Whole-Milk Mozzarella, Premium Pepperoni, Italian Sausage, Sliced Mushrooms, Black Olives, Cheddar, and Herb & Cheese Blend", price:1000,img:"https://olo-images-live.imgix.net/65/65094dbbf6d148a4aeafe310312fe890.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=c1d83a63e1c8ff938b3923c875f84272")
+Pizza.create(name:"Hawaiian", desc:"Our Original Crust topped with Traditional Red Sauce, Whole-Milk Mozzarella, Mild Cheddar, Canadian Bacon and Pineapple.", price:1000,img:"https://olo-images-live.imgix.net/66/66640415722049c3997f2c2c20654826.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=815bd702624589f79fc6413256ae004c")
+Pizza.create(name:"Chicken Garlic", desc:"Our Original Crust topped with Creamy Garlic Sauce, Whole-Milk Mozzarella, Grilled Chicken Raised Without Antibiotics, Roma Tomatoes, Green Onions, Cheddar, and Herb & Cheese Blend", price:1000,img:"https://olo-images-live.imgix.net/01/0160411619374fb09a788e1b07b621a9.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=0f43c0fa3ea779c005d4e9a4ebed012f")
+
+Food.create(name:"Chocolate Chip Cookie Dough", desc:"Fresh-made in house with Semi-Sweet Chocolate Chips", price:500,img:"https://olo-images-live.imgix.net/d9/d90b8af642724a23a0874c55a2648c37.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=a0163591c1cd631bd94b413c67f2978c")
+Food.create(name:"S'mores Pizza", desc:"Our Original Crust braided and topped with Semi-Sweet Chocolate Chips, Mini Marshmallows and Oatmeal Crisp Topping", price:500,img:"https://olo-images-live.imgix.net/39/398c986ab08f4e05bd86a4fa2a7899e0.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=180&h=120&fit=crop&fm=png32&s=7e355883874844732059e123a5144f92")
+Food.create(name:"2 Liter Pepsi Product", desc:"Select your flavor in store	", price:250,img:"https://olo-images-live.imgix.net/2e/2ee3b031270b4dc79f10c1ce99903328.jpg?auto=format%2Ccompress&q=60&cs=tinysrgb&w=350&h=233&fit=crop&fm=png32&s=25f9f14f7cdd528fb89df807ae99aa08")

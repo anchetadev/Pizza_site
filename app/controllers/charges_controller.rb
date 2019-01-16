@@ -13,7 +13,7 @@ class ChargesController < ApplicationController
       @fo.each do |p|
           @total += p.food.price
       end
-      @amount = @total
+      @amount = @total*100
     
       customer = Stripe::Customer.create(
         :email => params[:stripeEmail],
