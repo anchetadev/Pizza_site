@@ -1,5 +1,5 @@
 # Take home pizza ordering website inspired by Papa Murphy's user unfriendly website
-- Visit the site here! Deployed using AWS [Check me out!](http://3.17.56.100/)
+- Visit the site here! Deployed using AWS [Check me out!](http://3.17.56.100/)(site is currently offline I don't want to pay for AWS right now)
 - To log in as an admin use admin@email.com, Password is: asdasdasd
 
 ## Features
